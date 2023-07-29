@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(ellipse at right,#020d29,#090a0f);
+            overflow: hidden;
+            transition: ease-in-out;
+        }
+        .sun {
+            height: 50px;
+            width: 50px;
+            margin-top: 280px;
+            border-radius: 50%;
+            box-shadow:0 0 50px white;
+            background-color: yellow;
+        }
+
+        .earth,.moon,.mars,.moon1,.moon2 {
+            position: absolute;
+            border-style: solid;
+            border-width: 2px 2px 0 0;
+            border-color: white transparent transparent transparent;
+            border-radius: 50%;
+        }
+
+        .earth {
+            top: 208px;
+            left: 585px;
+            width: 200px;
+            height: 200px;
+            animation: akthar 5s linear infinite;
+        }
+
+        .moon {
+            top: -20px;
+            left: 120px;
+            width: 100px;
+            height: 100px;
+            animation: akthar 3s linear infinite;
+        }
+
+        .mars {
+            top: 170px;
+            left: 515px;
+            width: 340px;
+            height: 340px;
+            animation: akthar 13s linear infinite;
+        }
+
+        .moon1 {
+            top: -60px;
+            left: 200px;
+            width: 180px;
+            height: 180px;
+            animation: akthar 6s linear infinite;
+        }
+
+        .moon2 {
+            top: -10px;
+            left: 250px;
+            width: 150px;
+            height: 150px;
+            animation: akthar 8s linear infinite;
+        }
+
+        .earth::before,.moon::before,.mars::before,.moon1::before,.moon2::before {
+            content: "";
+            position: absolute;
+            border-radius: 100%;
+        }
+
+        .earth::before {
+            top: 5px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            background-color: aqua;
+        }
+
+        .moon::before {
+            top: 10px;
+            right: 0px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+        }
+
+        .mars::before {
+            top: 25px;
+            right: 15px;
+            width: 60px;
+            height: 60px;
+            background-color: goldenrod;
+        }
+
+        .moon1::before {
+            top: 15px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+        }
+
+        .moon2::before {
+            top: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+        }
+
+        @keyframes akthar {
+            to {
+                transform: rotate(360deg);
+                transition: ease-in-out;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="sun" style="display: block;text-align: center;">Solar System</div>
+        <div class="earth">
+            <div class="moon"></div>
+        </div>
+        <div class="mars">
+            <div class="moon1"></div>
+            <div class="moon2"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
